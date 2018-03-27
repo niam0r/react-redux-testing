@@ -26,7 +26,7 @@ export default class CommentBox extends React.Component {
           value={this.state.comment}
           onChange={this.handleChange.bind(this)}
         />
-        <button>Submit Comment</button>
+        <button action="submit">Submit Comment</button>
       </form>
     );
   }
