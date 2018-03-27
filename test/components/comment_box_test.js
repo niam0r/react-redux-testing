@@ -22,11 +22,12 @@ describe('CommentBox', () => {
 
   describe('entering some text', () => {
     beforeEach(() => {
+      // change event gets triggered when user type in textarea
       component.find('textarea').simulate('change', 'new comment');
     });
 
     it('shows that text in the textarea', () => {
-
+      expect(component.find('textarea')).to.have.value('new comment');
     });
 
     it('when submitted, clears the input', () => {
